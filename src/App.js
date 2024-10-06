@@ -1,11 +1,16 @@
-import './App.css';
+import React from 'react';
+import TarefaEntrada from './TarefaEntrada';
 
-function App() {
+const App = () => {
+  const handleTarefaAdicionar = (tarefa) => {
+    console.log(tarefa);
+  };
+
   return (
-    <div className="container col-2 row-2">
-      <h1>"Hello, Tarefas!"</h1>
+    <div className="container mt-4">
+      <TarefaEntrada onTarefaAdicionar={handleTarefaAdicionar} />
     </div>
   );
-}
+};
 
 export default App;
