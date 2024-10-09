@@ -1,7 +1,10 @@
 import React from 'react';
-import TarefaEntrada from './TarefaEntrada';
+import TarefaEntrada from './Components/TarefaEntrada';
+import TarefaLista from './Components/TarefaLista';
 
 const App = () => {
+  const tarefas = ['Preparar aula de programação', 'Fazer feira', 'Preparar marmitas'];
+
   const handleTarefaAdicionar = (tarefa) => {
     console.log(tarefa);
   };
@@ -9,6 +12,7 @@ const App = () => {
   return (
     <div className="container mt-4">
       <TarefaEntrada onTarefaAdicionar={handleTarefaAdicionar} />
+      <TarefaLista tarefas={tarefas} />
     </div>
   );
 };
