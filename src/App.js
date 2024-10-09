@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import TarefaEntrada from './Components/TarefaEntrada';
 import TarefaLista from './Components/TarefaLista';
 
 const App = () => {
-  const tarefas = ['Preparar aula de programação', 'Fazer feira', 'Preparar marmitas'];
+  const [tarefas, setTarefas] = useState([]);
 
   const handleTarefaAdicionar = (tarefa) => {
-    console.log(tarefa);
+    setTarefas([...tarefas, tarefa]);
   };
 
   return (

@@ -4,6 +4,9 @@ const TarefaEntrada = ({ onTarefaAdicionar }) => {
   return (
     <form onSubmit={(e) => {
       e.preventDefault();
+
+      if (!e.target[0].value) { return }
+      
       onTarefaAdicionar(e.target[0].value);  
     }}>
       <div className="form-group mb-3">
